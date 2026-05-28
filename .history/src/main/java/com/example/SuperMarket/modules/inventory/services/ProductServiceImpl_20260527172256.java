@@ -1,0 +1,12 @@
+package com.example.SuperMarket.modules.inventory.services;
+
+import com.example.SuperMarket.modules.inventory.dtos.ProductRequestDTO;
+import com.example.SuperMarket.modules.inventory.dtos.ProductResponseDTO;
+import com.example.SuperMarket.modules.inventory.entities.Category;
+import com.example.SuperMarket.modules.inventory.entities.Product;
+import com.example.SuperMarket.modules.inventory.repositories.CategoryRepository;
+import com.example.SuperMarket.modules.inventory.repositories.ProductRepository;
+
+public class ProductServiceImpl {
+    
+}

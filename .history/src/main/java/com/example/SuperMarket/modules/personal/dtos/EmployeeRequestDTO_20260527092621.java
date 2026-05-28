@@ -1,0 +1,25 @@
+package com.example.SuperMarket.modules.personal.dtos;
+
+import jakarta.validation.constraints.*;
+import lombok.*;
+import java.time.LocalDate;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+
+public class EmployeeRequestDTO {
+    
+    @NotBlank (message = "Por favor ingrese su documento de identidad")
+    @Size(min = 6, max = 20, message = "El documento de identidad debe tener entre 6 y 20 caracteres")
+    private String id;
+
+    @NotBlank (message = "Por favor ingrese su nombre completo")
+    @Size(min = 2, max = 100, message = "El nombre no puede superar los 100 caracteres")
+    private String nombre;
+
+    @NotBlank (message = "el cargo es obligatorio")
+    @Pattern(regexp = "Cajero|Reponedor|Gerente", message = "El cargo debe ser 'Cajero', 'Reponedor' o 'Gerente'")
+}
