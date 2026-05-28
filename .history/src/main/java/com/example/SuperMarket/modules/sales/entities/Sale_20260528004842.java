@@ -1,8 +1,6 @@
 package com.example.SuperMarket.modules.sales.entities;
 
 import com.example.SuperMarket.modules.personal.entities.Employee;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDateTime;
@@ -37,7 +35,6 @@ public class Sale {
     private Employee empleado;
 
     @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonManagedReference
     private List<SaleDetail> detalles;
 
     @PrePersist

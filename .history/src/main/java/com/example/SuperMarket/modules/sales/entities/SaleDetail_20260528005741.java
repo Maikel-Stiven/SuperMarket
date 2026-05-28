@@ -1,7 +1,7 @@
 package com.example.SuperMarket.modules.sales.entities;
 
 import com.example.SuperMarket.modules.inventory.entities.Product;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import jakarta.persistence.*;
@@ -30,12 +30,12 @@ public class SaleDetail {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "venta_id", nullable = false)
-    @JsonIgnore 
+    @JsonBackReference
     private Sale venta;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "producto_id", nullable = false)
-    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "categoria", "stock", "activo"})
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler", "category", "stock", "activo"})
     private Product producto;
 
 }
