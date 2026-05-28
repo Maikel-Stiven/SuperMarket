@@ -1,0 +1,224 @@
+{
+  "info": {
+    "_postman_id": "2a0bec3b-1dc2-400c-b1d3-1160629a4dcc",
+    "name": "SuperMarket",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54439970",
+    "_collection_link": "https://go.postman.co/collection/54439970-2a0bec3b-1dc2-400c-b1d3-1160629a4dcc?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Entrada Almacen",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"productoId\": 1,\n    \"proveedorId\": 1,\n    \"cantidad\": 50\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/providers/entrada",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "providers",
+            "entrada"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear Venta",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"empleadoId\": \"E001\", \n    \"items\": [\n        {\n            \"productoId\": 1,\n            \"cantidad\": 2\n        }\n    ]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/sales",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "sales"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Listar Productos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Crear Categoría",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \n    \"nombre\": \"Comida congelada\",\n    \"descripcion\": \"Todos los productos que se conservan en el congelador como nuggets, papas fritas, verduras, etc...\"\n\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/categories",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "categories"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Post Crear Empleado",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": \"987380023\",\n    \"nombre\": \"Martha Paez\",\n    \"fechaContratacion\" : \"2023-09-25\",\n    \"fechaIngreso\": \"2026-05-29\",\n    \"salario\": 1400000.0,\n    \"rol\" : \"CAJERO\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/empleados",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "empleados"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET Listar Empleados Por Rol/Cargo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/empleados/role/CAJERO",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "empleados",
+            "role",
+            "CAJERO"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Crear/agregar Producto",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"codigoBarras\": \"98983281233\",\n    \"nombre\": \"500 gr de panela\",\n    \"precio\": 5000.0,\n    \"stock\": 15,\n    \"categoriaId\": 1\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://localhost:8080/api/employees",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/employees",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "employees"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
