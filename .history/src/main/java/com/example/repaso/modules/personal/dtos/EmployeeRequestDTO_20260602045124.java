@@ -4,7 +4,7 @@ import jakarta.validation.constraints.*;
 import lombok.*;
 import java.time.LocalDate;
 
-import com.example.repaso.modules.personal.entities.Role;
+import ;
 
 @Data
 @NoArgsConstructor

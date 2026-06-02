@@ -1,0 +1,43 @@
+{
+  "info": {
+    "_postman_id": "94447f9f-cf4e-43ea-9c67-12b0be87324d",
+    "name": "supermarket/corregido",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "54439970",
+    "_collection_link": "https://go.postman.co/collection/54439970-94447f9f-cf4e-43ea-9c67-12b0be87324d?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Crear categoria",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Agregar producto",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Agregar Empleado",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Registrar Venta",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
